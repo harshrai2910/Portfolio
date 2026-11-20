@@ -22,7 +22,7 @@ export const Navigate = () => {
         PROJECTS
       </Link>
       |
-      <Link to="/engineer" className={navClass("/engineer")}>
+      <Link to="/engineering" className={navClass("/engineering")}>
         ENGINEERING
       </Link>
       |

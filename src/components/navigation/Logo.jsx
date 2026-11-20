@@ -1,11 +1,13 @@
 import { CircleLetterH } from "lucide-react";
 import { useTheme } from "../../redux/hooks/themeHook";
+import { Link } from "react-router-dom";
 
 export const Logo = () => {
   const { theme } = useTheme();
   return (
     <>
-      <div
+      <Link
+        to="/"
         className={`${theme ? "text-zinc-800" : "text-zinc-100"} font-roboto flex items-center justify-center gap-2`}
       >
         <div>
@@ -21,7 +23,7 @@ export const Logo = () => {
             SOFTWARE DEVELOPER
           </p>
         </div>
-      </div>
+      </Link>
     </>
   );
 };

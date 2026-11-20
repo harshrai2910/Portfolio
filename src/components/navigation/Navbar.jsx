@@ -5,30 +5,27 @@ import { ToggleMode } from "./ToggleMode";
 
 export const Navbar = () => {
   const { theme } = useTheme();
+  const isLight = theme; // true = light mode
+
   return (
-    <div className="flex items-center justify-center w-full px-2 sm:px-4">
-      <div
-        className={`flex items-center justify-between w-full max-w-6xl border-2 shadow-sm rounded-3xl p-1
-          ${theme ? "border-white bg-gray-50" : "border-zinc-700 bg-zinc-800"}`}
+    <header className="fixed inset-x-0 top-2 z-50 flex justify-center px-2 sm:px-4">
+      <nav
+        aria-label="Main"
+        className={`relative flex w-full max-w-6xl items-center justify-between rounded-3xl border p-1 shadow-sm backdrop-blur
+          ${isLight ? "border-zinc-200 bg-gray-50/90" : "border-zinc-700 bg-zinc-800/90"}`}
       >
-        <div className="shrink-0">
-          <Logo />
+        <Logo />
+
+        {/* Links: hidden on mobile and tablet, shown from lg up */}
+        <div
+          className={`absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full border p-1 font-roboto text-xs font-medium shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] lg:flex
+            ${isLight ? "border-white bg-zinc-200 text-zinc-600" : "border-zinc-700 bg-zinc-700 text-zinc-100"}`}
+        >
+          <Navigate />
         </div>
 
-        <div className="hidden lg:block">
-          <div
-            className={`flex items-center gap-1 text-xs font-medium font-roboto shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]
-              ${theme ? "text-zinc-600 border-white bg-zinc-200" : "text-zinc-100 border-zinc-700 bg-zinc-700"}
-              border p-1 rounded-full`}
-          >
-            <Navigate />
-          </div>
-        </div>
-
-        <div className="shrink-0">
-          <ToggleMode />
-        </div>
-      </div>
-    </div>
+        <ToggleMode />
+      </nav>
+    </header>
   );
 };

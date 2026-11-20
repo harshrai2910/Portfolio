@@ -115,7 +115,7 @@ export const CodeCard = () => {
           }
           return n + 1;
         });
-      }, 40);
+      }, 35);
     }, 600);
 
     return () => {

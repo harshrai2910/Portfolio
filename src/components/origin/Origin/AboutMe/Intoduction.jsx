@@ -3,6 +3,7 @@ import { useTheme } from "../../../../redux/hooks/themeHook";
 import { IoLogoLinkedin } from "react-icons/io";
 import { DiGithubBadge } from "react-icons/di";
 import { TbBrandLeetcode } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 export const Introduction = () => {
   const { theme } = useTheme();
@@ -51,7 +52,8 @@ export const Introduction = () => {
       </p>
 
       <div className="flex flex-wrap gap-2 mb-7">
-        <button
+        <Link
+          to="/projects"
           className={`border-none flex items-center gap-4 font-medium p-1 pr-7 rounded-full shadow-lg transition-all whitespace-nowrap
             ${theme ? "bg-zinc-100" : "bg-zinc-700"}`}
         >
@@ -61,13 +63,14 @@ export const Introduction = () => {
           <span className={theme ? "text-zinc-700" : "text-zinc-300"}>
             Explore Work
           </span>
-        </button>
-        <button
+        </Link>
+        <Link
+          to="/engineering"
           className={`border-none flex items-center gap-4 font-medium px-8 py-3 rounded-full shadow-lg transition-all whitespace-nowrap
             ${theme ? "bg-zinc-100 text-zinc-700" : "bg-zinc-700 text-zinc-300"}`}
         >
           Behind The Code
-        </button>
+        </Link>
       </div>
 
       <div className="flex items-center gap-3">
