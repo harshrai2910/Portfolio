@@ -1,21 +1,22 @@
 // EngineeringCard.jsx
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useTheme } from "../../../../redux/hooks/themeHook";
+import { Link } from "react-router-dom";
 
 export const EngineeringCard = ({
   image,
   category,
   title,
   description,
-  href = "#",
+  link,
 }) => {
   const { theme } = useTheme();
   return (
-    <a
-      href={href}
+    <Link
+      to={link}
       className={`group grid h-full grid-cols-1 gap-4 rounded-3xl border border-slate-200 bg-slate-50 p-2 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md 
       focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-orange-500 sm:grid-cols-[minmax(0,3fr)_minmax(0,7fr)] sm:gap-5
-      ${theme ? "bg-zinc-100 border-white" : "bg-zinc-700 border-zinc-600"}`}
+      ${theme ? "bg-white/50 border-white/10" : "bg-white/7 border-white/10"}`}
     >
       {/* Image: absolutely positioned on sm+ so it fills the row height
           without ever making the card taller */}
@@ -64,13 +65,13 @@ export const EngineeringCard = ({
             />
           </span>
           <span
-            className={`grid size-11 place-items-center rounded-full border border-slate-200 bg-white text-orange-500 shadow-sm transition group-hover:translate-x-1 group-hover:border-orange-500 group-hover:bg-orange-500 group-hover:text-white
-            ${theme ? "bg-zinc-100" : "bg-zinc-700"}`}
+            className={`grid size-11 place-items-center rounded-full border-2 text-orange-500 shadow-sm transition group-hover:translate-x-1 group-hover:border-orange-500 group-hover:bg-orange-500 group-hover:text-white
+            ${theme ? "bg-black/5 border-black/1" : "bg-black/10 border-white/20"}`}
           >
             <ArrowRight size={18} />
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };

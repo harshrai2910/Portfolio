@@ -7,11 +7,11 @@ import { TbBrandLeetcode } from "react-icons/tb";
 // import { Logo } from "./Logo";
 
 const links = [
-  { label: "Origin", href: "/" },
-  { label: "Projects", href: "/projects" },
-  { label: "Engineering", href: "/engineering" },
-  { label: "Experiments", href: "/experiment" },
-  { label: "Contact", href: "/contact" },
+  { label: "Origin", to: "/" },
+  { label: "Projects", to: "/projects" },
+  { label: "Engineering", to: "/engineering" },
+  { label: "Experiments", to: "/experiment" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const socials = [
@@ -34,11 +34,10 @@ const socials = [
 
 export const Footer = ({ back }) => {
   const { theme } = useTheme();
-  const isLight = theme;
 
-  const muted = isLight ? "text-zinc-500" : "text-zinc-400";
-  const strong = isLight ? "text-zinc-900" : "text-zinc-100";
-  const chip = isLight
+  const muted = theme ? "text-zinc-500" : "text-zinc-400";
+  const strong = theme ? "text-zinc-900" : "text-zinc-100";
+  const chip = theme
     ? "bg-zinc-200 text-zinc-700 hover:bg-zinc-300"
     : "bg-zinc-700 text-zinc-100 hover:bg-zinc-600";
 
@@ -46,13 +45,15 @@ export const Footer = ({ back }) => {
     <footer className="w-full px-2 pb-4 sm:px-4">
       <div
         className={`mx-auto w-full max-w-6xl rounded-3xl border p-6 shadow-sm md:p-10
-          ${isLight ? "border-zinc-200 bg-gray-50" : "border-zinc-700 bg-zinc-800"}`}
+        ${theme ? "border-white bg-white/20" : "border-white/5 bg-white/3"}`}
       >
         {/* Top: brand, nav, socials */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           {/* Brand */}
           <div className="space-y-4">
-            <CircleLetterH />
+            <CircleLetterH
+              className={theme ? "text-zinc-800" : "text-zinc-300"}
+            />
             <p
               className={`max-w-xs font-inter text-sm leading-relaxed ${muted}`}
             >
@@ -61,7 +62,7 @@ export const Footer = ({ back }) => {
             </p>
             <span
               className={`inline-flex items-center gap-2 rounded-full border px-3 py-1.5 font-mono text-xs font-medium tracking-wider
-                ${isLight ? "border-zinc-200 bg-white text-zinc-700" : "border-zinc-700 bg-zinc-900/60 text-zinc-200"}`}
+                ${theme ? "border-zinc-200 bg-white text-zinc-700" : "border-zinc-700 bg-zinc-900/60 text-zinc-200"}`}
             >
               <span className="relative flex size-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange-500 opacity-60 motion-reduce:animate-none" />
@@ -80,12 +81,12 @@ export const Footer = ({ back }) => {
             <ul className="space-y-2.5">
               {links.map((l) => (
                 <li key={l.label}>
-                  <a
-                    href={l.href}
+                  <Link
+                    to={l.to}
                     className={`font-mono text-xs font-semibold uppercase tracking-widest transition hover:text-orange-500 ${strong}`}
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -122,23 +123,13 @@ export const Footer = ({ back }) => {
 
         {/* Bottom bar */}
         <div
-          className={`mt-10 flex flex-col items-start justify-between gap-4 border-t pt-6 sm:flex-row sm:items-center
-            ${isLight ? "border-zinc-200" : "border-zinc-700"}`}
+          className={`mt-10 flex items-center justify-center gap-4 border-t pt-6 sm:flex-row sm:items-center
+            ${theme ? "border-zinc-200" : "border-zinc-700"}`}
         >
           <p className={`font-mono text-xs tracking-wider ${muted}`}>
             © {new Date().getFullYear()} HARSH RAI. BUILT WITH REACT &amp;
             TAILWIND.
           </p>
-
-          <a
-            href={back}
-            className={`group inline-flex items-center gap-3 rounded-full py-1 pl-4 pr-1 font-mono text-xs font-semibold tracking-widest transition ${chip}`}
-          >
-            BACK TO TOP
-            <span className="grid size-9 place-items-center rounded-full border-2 border-orange-500 text-orange-500 transition group-hover:bg-orange-500 group-hover:text-white">
-              <ArrowUp size={16} />
-            </span>
-          </a>
         </div>
       </div>
     </footer>

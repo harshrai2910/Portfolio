@@ -9,7 +9,7 @@ export const Navigate = () => {
     `px-5 py-3 rounded-full border-none transition-all tracking-wider ${
       location.pathname === path
         ? `shadow-sm ${theme ? "bg-white text-zinc-500" : "bg-zinc-800 text-white"}`
-        : `${theme ? "text-zinc-500" : "text-zinc-300"}`
+        : `${theme ? "text-zinc-800" : "text-zinc-100"}`
     }`;
 
   return (

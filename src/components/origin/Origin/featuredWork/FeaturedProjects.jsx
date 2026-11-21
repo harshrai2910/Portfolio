@@ -10,8 +10,9 @@ export const FeaturedProjects = () => {
     <div className="flex items-center justify-center w-full px-2 sm:px-4">
       <div
         className={`flex items-center justify-between flex-col w-full max-w-6xl 
-          p-5 md:p-10 border-2 shadow-sm rounded-4xl 
-          ${theme ? "border-white bg-gray-50" : "border-zinc-700 bg-zinc-800"}`}
+          py-5 px-2 md:p-10 border-2 shadow-sm rounded-4xl 
+          ${theme ? "border-white bg-white/20" : "border-white/5 bg-white/3"}
+          `}
       >
         <Headers data={sections.find((section) => section.id === 1)} />
         <div className="space-y-5">
