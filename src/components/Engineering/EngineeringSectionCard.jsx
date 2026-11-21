@@ -6,7 +6,6 @@ export const EngineeringSectionCard = ({
   image,
   number,
   category,
-  name,
   description,
   to,
 }) => {
@@ -45,7 +44,7 @@ export const EngineeringSectionCard = ({
               className={`font-inter text-xl font-bold tracking-tight text-slate-900 md:text-3xl
           ${theme ? "text-zinc-900" : "text-zinc-100"}`}
             >
-              {name}
+              {category}
             </h2>
 
             <p

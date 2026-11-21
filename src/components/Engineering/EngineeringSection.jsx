@@ -23,7 +23,6 @@ export const EngineeringSection = () => {
               image={data.image}
               number={data.id}
               category={data.category}
-              name={data.name}
               description={data.description}
               to={data.link}
             />

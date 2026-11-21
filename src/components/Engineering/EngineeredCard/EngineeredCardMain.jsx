@@ -240,13 +240,12 @@ export const EngineeredCardMain = ({ data }) => {
             {data.solution.title}
           </h3>
           <div className="grid gap-3 sm:grid-cols-3">
-            {data.solution.statuses.map(({ icon: Icon, name, desc, tone }) => (
+            {data.solution.statuses.map(({ icon, name, desc, tone }) => (
               <div key={name} className={`rounded-2xl border p-4 ${t.inner}`}>
                 <span
-                  className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium 
-                    text-${tone}-500 bg-${tone}-500/10 border-${tone}-500/30`}
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium ${tone}`}
                 >
-                  <Icon size={14} />
+                  {renderIcon({ icon, style: "", size: 14 })}
                   {name}
                 </span>
                 <p className={`mt-3 text-sm ${t.muted}`}>{desc}</p>
