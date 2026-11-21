@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import sectionData from "../../data/headerData";
-import { UniversalHeader } from "../universalHeader";
+import { UniversalHeader } from "../UniversalHeader";
 
 export const ContactSection = () => {
   const location = useLocation();

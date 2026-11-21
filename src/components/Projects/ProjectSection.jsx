@@ -4,7 +4,7 @@ import { projects } from "../../data/projectsData";
 import { useTheme } from "../../redux/hooks/themeHook";
 import { Footer } from "../Footer";
 import { ProjectCard } from "../origin/Origin/featuredWork/ProjectCard";
-import { UniversalHeader } from "../universalHeader";
+import { UniversalHeader } from "../UniversalHeader";
 import { useEffect } from "react";
 
 export const ProjectSection = () => {
