@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import sectionData from "../../data/headerData";
 import { useTheme } from "../../redux/hooks/themeHook";
-import { UniversalHeader } from "../universalHeader";
+import { UniversalHeader } from "../UniversalHeader";
 import { EngineeringSectionCard } from "./EngineeringSectionCard";
 import { engineering } from "../../data/engineeringData";
 import { Footer } from "../Footer";
