@@ -58,7 +58,7 @@ export const EngineeringCard = ({
             className={`inline-flex items-center gap-1.5 font-inter text-sm font-semibold text-slate-900 md:text-base
             ${theme ? "text-zinc-600" : "text-zinc-400"}`}
           >
-            Read post
+            Explore Now
             <ArrowUpRight
               size={16}
               className="transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

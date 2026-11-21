@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const Headers = ({ data }) => {
   const { theme } = useTheme();
   return (
-    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5 w-full mb-10 px-2 md:px-0">
+    <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-5 w-full mb-10 px-2 md:px-0">
       <div className="flex items-start gap-4 sm:gap-5 min-w-0">
         <div
           className={`shrink-0 px-3 py-2 border-2 rounded-lg font-medium text-lg font-roboto
@@ -39,7 +39,7 @@ export const Headers = ({ data }) => {
         to={data.buttonLink}
         className={`self-start md:self-auto shrink-0 whitespace-nowrap border-none flex items-center gap-4
           font-medium p-1 pl-7 rounded-full shadow-lg transition-all
-          ${theme ? "bg-zinc-100" : "bg-zinc-700"}`}
+          ${theme ? "bg-white/70 border-white/80" : "bg-white/[0.07] border-white/15"}`}
       >
         <span className={theme ? "text-zinc-700" : "text-zinc-300"}>
           {data.buttonText}

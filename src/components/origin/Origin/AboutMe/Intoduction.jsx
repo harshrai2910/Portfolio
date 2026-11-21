@@ -55,7 +55,7 @@ export const Introduction = () => {
         <Link
           to="/projects"
           className={`border-none flex items-center gap-4 font-medium p-1 pr-7 rounded-full shadow-lg transition-all whitespace-nowrap
-            ${theme ? "bg-zinc-100" : "bg-zinc-700"}`}
+            ${theme ? "bg-white/70 border-white/80" : "bg-white/[0.07] border-white/15"}`}
         >
           <span className="rounded-full bg-orange-500 p-3 shadow-[inset_0_2px_8px_rgba(255,255,255,0.5)]">
             <ArrowRight size={18} />
@@ -67,7 +67,7 @@ export const Introduction = () => {
         <Link
           to="/engineering"
           className={`border-none flex items-center gap-4 font-medium px-8 py-3 rounded-full shadow-lg transition-all whitespace-nowrap
-            ${theme ? "bg-zinc-100 text-zinc-700" : "bg-zinc-700 text-zinc-300"}`}
+            ${theme ? "bg-white/70 border-white/80 text-zinc-700" : "bg-white/[0.07] border-white/15 text-zinc-300"}`}
         >
           Behind The Code
         </Link>
@@ -81,7 +81,7 @@ export const Introduction = () => {
             title={link.name}
             aria-label={link.name}
             className={`text-2xl p-2 border-none rounded-full flex items-center justify-center shadow-lg hover:text-orange-500 transition-all duration-300
-              ${theme ? "bg-zinc-100" : "bg-zinc-700 text-white"}`}
+              ${theme ? "bg-white/70 border-white/80" : "bg-white/[0.07] border-white/15 text-white"}`}
           >
             {link.icon}
           </a>
