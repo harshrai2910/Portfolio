@@ -141,7 +141,7 @@ export const EngineeredCardMain = ({ data }) => {
     <div className="flex items-center justify-center w-full px-2 sm:px-4">
       <div
         className={`flex flex-col gap-10 w-full max-w-6xl
-          py-6 px-4 md:p-10 border-2 shadow-sm rounded-4xl backdrop-blur-xl
+          py-6 px-4 md:p-10 border-2 shadow-sm rounded-4xl 
           ${theme ? "border-white bg-white/20" : "border-white/5 bg-white/3"}`}
       >
         {/* 01 Challenge */}
@@ -153,8 +153,8 @@ export const EngineeredCardMain = ({ data }) => {
           />
           <div className="grid gap-6 md:grid-cols-[1.4fr_1fr]">
             <div className={`space-y-3 leading-relaxed ${t.muted}`}>
-              {data.challenge.paragraphs.map((para) => (
-                <p>{para}</p>
+              {data.challenge.paragraphs.map((para, index) => (
+                <p key={index}>{para}</p>
               ))}
             </div>
             <div

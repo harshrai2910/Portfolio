@@ -4,12 +4,13 @@ import project_03 from "../assets/project_03.webp";
 
 export const projects = [
   {
-    id: 1,
+    id: "01",
     name: "ConnectSD",
     slug: "connectsd",
     tagline: "A networking platform built for students.",
-    category: "Full Stack",
+    category: "Full Stack web-application",
     status: "Live",
+    path: "/project/connectsd",
 
     description:
       "A student networking platform that helps students connect through shared skills, interests, and learning goals.",
@@ -19,7 +20,7 @@ export const projects = [
     techStack: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
 
     links: {
-      github: "https://github.com/harshrai2910/Student_Linkedin_platform",
+      github: "https://github.com/harshrai2910/Networking_System",
       live: "https://connectsd.vercel.app/",
     },
 
@@ -116,12 +117,13 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: "02",
     name: "Airbnb Clone",
     slug: "airbnb-clone",
     tagline: "A property rental platform with guest and host experiences.",
     category: "Full Stack",
     status: "Live",
+    path: "/project/airbnb-clone",
 
     description:
       "A full-stack property rental application where guests can explore property listings, view details and save favourites, while hosts can manage their own property listings.",
@@ -138,8 +140,8 @@ export const projects = [
     ],
 
     links: {
-      github: "",
-      live: "",
+      github: "#",
+      live: "#",
     },
 
     statistics: [
@@ -266,12 +268,13 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: "03",
     name: "Link Saver",
     slug: "link-saver",
     tagline: "A personal space to save and manage useful links.",
     category: "Full Stack",
     status: "Built",
+    path: "/project/link-saver",
 
     description:
       "A full-stack link management application that allows users to securely save, organize, edit and manage their personal collection of useful links.",
@@ -289,7 +292,7 @@ export const projects = [
 
     links: {
       github: "https://lnkd.in/gz_fhEXY",
-      live: null,
+      live: "#",
     },
 
     statistics: [

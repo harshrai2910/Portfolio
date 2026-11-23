@@ -16,7 +16,7 @@ export const engineering = [
   {
     id: 2,
     category: "Performance Engineering",
-    title: "The 20-Second Problem",
+    title: "The 20-Second Problem", 
     description:
       "How asynchronous image moderation reduced post creation response time from 15–20 seconds to approximately 1–2 seconds.",
     image: img_02,

@@ -16,7 +16,7 @@ export const EngineeredCardHeader = ({ data }) => {
     <div className="flex items-center justify-center w-full px-2 sm:px-4">
       <div
         className={`relative overflow-hidden flex flex-col items-start w-full max-w-6xl
-          py-6 px-4 md:p-10 border-2 shadow-sm rounded-4xl backdrop-blur-xl
+          py-6 px-4 md:p-10 border-2 shadow-sm rounded-4xl
           ${theme ? "border-white bg-white/20" : "border-white/5 bg-white/3"}`}
       >
         <div className="relative w-full">

@@ -9,7 +9,6 @@ export const EngineeringDataComponent = () => {
   const data = engineeringComponentData.find(
     (data) => data.path === location.pathname,
   );
-  console.log(data);
   return (
     <>
       <EngineeredCardHeader data={data.header} />

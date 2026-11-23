@@ -9,6 +9,7 @@ import { ProjectSection } from "./components/Projects/ProjectSection";
 import { ContactSection } from "./components/Contact/ContactSection";
 import { EngineeringSection } from "./components/Engineering/EngineeringSection";
 import { EngineeringDataComponent } from "./components/Engineering/EngineeringDataComponent";
+import { ProjectCardComponent } from "./components/Projects/ProjectCardComponent";
 
 function App() {
   const { theme } = useTheme();
@@ -38,9 +39,11 @@ function App() {
           <Route path="/experiment" element={<p>experiment</p>} />
           <Route path="/contact" element={<ContactSection />} />
           <Route
-            path="engineering/:name"
+            path="/engineering/:name"
             element={<EngineeringDataComponent />}
           />
+
+          <Route path="/project/:name" element={<ProjectCardComponent />} />
         </Routes>
       </main>
     </>

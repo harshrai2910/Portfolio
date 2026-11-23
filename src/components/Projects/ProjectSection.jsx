@@ -28,6 +28,7 @@ export const ProjectSection = () => {
                 category={data.category}
                 name={data.name}
                 description={data.description}
+                path={data.path}
               />
             ))}
           </div>

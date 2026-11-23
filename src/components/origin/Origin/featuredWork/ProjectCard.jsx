@@ -1,11 +1,19 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useTheme } from "../../../../redux/hooks/themeHook";
+import { Link } from "react-router-dom";
 
-export const ProjectCard = ({ image, number, category, name, description }) => {
+export const ProjectCard = ({
+  image,
+  number,
+  category,
+  name,
+  description,
+  path,
+}) => {
   const { theme } = useTheme();
   return (
-    <a
-      href="#"
+    <Link
+      to={path}
       className={`group grid w-full grid-cols-1 md:grid-cols-12  md:gap-10 gap-5 rounded-3xl p-3 transition border-2
         hover:-translate-y-0.5 focus-visible:outline-2 shadow-sm focus-visible:outline-offset-4 focus-visible:outline-orange-500 
         ${theme ? "bg-white/50 border-white/10" : "bg-white/7 border-white/10"}`}
@@ -66,6 +74,6 @@ export const ProjectCard = ({ image, number, category, name, description }) => {
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
