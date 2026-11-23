@@ -44,7 +44,7 @@ export const Footer = ({ back }) => {
   return (
     <footer className="w-full px-2 pb-4 sm:px-4">
       <div
-        className={`mx-auto w-full max-w-6xl rounded-3xl border p-6 shadow-sm md:p-10
+        className={`mx-auto w-full max-w-6xl rounded-3xl border-2 p-6 shadow-sm md:p-10
         ${theme ? "border-white bg-white/20" : "border-white/5 bg-white/3"}`}
       >
         {/* Top: brand, nav, socials */}
