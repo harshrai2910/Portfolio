@@ -20,20 +20,20 @@ export default function ProjectCardHeader({
            w-full max-w-6xl py-6 px-4 md:p-10 border-2 shadow-sm rounded-4xl 
           ${theme ? "border-white bg-white/20" : "border-white/5 bg-white/3"}`}
       >
-        <Link
-          to="/projects"
-          className={`group inline-flex items-center gap-2 text-sm font-inter transition-colors hover:text-orange-500
-            ${theme ? "text-slate-600" : "text-white/70"}`}
-        >
-          <span
-            className={`grid size-7 place-items-center rounded-full border transition group-hover:-translate-x-1 group-hover:border-orange-500 group-hover:bg-orange-500 group-hover:text-white`}
-          >
-            <ArrowLeft size={15} />
-          </span>
-          All projects
-        </Link>
-
         <div className="md:col-span-7">
+          <Link
+            to="/projects"
+            className={`group flex w-fit items-center gap-2 text-sm font-inter transition-colors hover:text-orange-500
+            ${theme ? "text-slate-600" : "text-white/70"}`}
+          >
+            <span
+              className={`grid size-7 place-items-center rounded-full border transition group-hover:-translate-x-1 group-hover:border-orange-500 group-hover:bg-orange-500 group-hover:text-white`}
+            >
+              <ArrowLeft size={15} />
+            </span>
+            All projects
+          </Link>
+
           <div className="absolute top-0 right-0 h-20 w-20 bg-orange-500 blur-3xl"></div>
           <p
             className={`inline-flex items-center gap-2 rounded-full border px-3 text-sm my-4 
