@@ -12,10 +12,10 @@ const sectionData = [
       "Technical challenges I've encountered, architectural decisions I've made, and engineering solutions I've implemented while building real-world applications.",
   },
   {
-    path: "/experiment",
-    title: "Experiment",
+    path: "/systems",
+    title: "Systems",
     description:
-      "Technologies, tools, and engineering concepts I've explored and worked with to build, optimize, and deliver reliable applications.",
+      "Exploring the foundations of software engineering, from operating systems and networking to infrastructure and system design.",
   },
   {
     path: "/contact",

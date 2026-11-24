@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import sectionData from "../../data/headerData";
 import { UniversalHeader } from "../UniversalHeader";
+import ContactForm from "./ContactForm";
 
 export const ContactSection = () => {
   const location = useLocation();
@@ -11,6 +12,8 @@ export const ContactSection = () => {
           <UniversalHeader
             data={sectionData.find((d) => d.path === location.pathname)}
           />
+
+          {/* <ContactForm /> */}
         </div>
       </section>
     </>

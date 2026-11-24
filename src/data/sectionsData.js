@@ -22,13 +22,13 @@ export const sections = [
 
   {
     id: 3,
-    name: "Experiments",
-    label: "// Experiments",
-    title: "Ideas beyond the usual.",
+    name: "Systems",
+    label: "// Systems",
+    title: "Understanding what powers software.",
     description:
-      "A playground for creative coding, interactive experiences, and things I'm curious enough to explore.",
-    buttonText: "View Experiments",
-    buttonLink: "/experiment",
+      "Exploring operating systems, networking, infrastructure, and core engineering concepts.",
+    buttonText: "Explore Systems",
+    buttonLink: "/systems",
   },
 
   {

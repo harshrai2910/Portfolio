@@ -22,7 +22,7 @@ export const ProjectCard = ({
       <div className="aspect-16/10 md:col-span-5 overflow-hidden rounded-2xl shadow-sm">
         <img
           src={image}
-          alt="ConnectSD preview"
+          alt="project image preview"
           className="h-full w-full object-cover object-top"
         />
       </div>
@@ -32,7 +32,7 @@ export const ProjectCard = ({
         <div className="space-y-3">
           <div className="flex items-center gap-3 font-roboto text-xs font-medium tracking-widest text-slate-500">
             <span className={`${theme ? "text-zinc-600" : "text-zinc-400"}`}>
-              0{number}
+              {number}
             </span>
             <span className="h-0.5 w-8 rounded-full bg-orange-500" />
             <span className={`${theme ? "text-zinc-600" : "text-zinc-400"}`}>

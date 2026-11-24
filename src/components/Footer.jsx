@@ -10,7 +10,7 @@ const links = [
   { label: "Origin", to: "/" },
   { label: "Projects", to: "/projects" },
   { label: "Engineering", to: "/engineering" },
-  { label: "Experiments", to: "/experiment" },
+  { label: "Systems", to: "/systems" },
   { label: "Contact", to: "/contact" },
 ];
 
@@ -27,7 +27,7 @@ const socials = [
   },
   {
     label: "LeetCode",
-    href: "hthttps://leetcode.com/u/Harsh_rai_2025/",
+    href: "https://leetcode.com/u/Harsh_rai_2025/",
     icon: TbBrandLeetcode,
   },
 ];
@@ -127,7 +127,7 @@ export const Footer = ({ back }) => {
             ${theme ? "border-zinc-200" : "border-zinc-700"}`}
         >
           <p className={`font-mono text-xs tracking-wider ${muted}`}>
-            © {new Date().getFullYear()} HARSH RAI. BUILT WITH REACT &amp;
+            &copy; {new Date().getFullYear()} HARSH RAI. BUILT WITH REACT &amp;
             TAILWIND.
           </p>
         </div>

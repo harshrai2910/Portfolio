@@ -1,16 +1,16 @@
-import project_01 from "../assets/project_01.webp";
-import project_02 from "../assets/project_02.webp";
-import project_03 from "../assets/project_03.webp";
+import project_01 from "../assets/project_01.png";
+import project_02 from "../assets/project_02.png";
+import project_03 from "../assets/project_03.png";
 
 export const projects = [
   {
     id: "01",
     name: "ConnectSD",
-    slug: "connectsd",
     tagline: "A networking platform built for students.",
     category: "Full Stack web-application",
     status: "Live",
     path: "/project/connectsd",
+    web: "connectsd.com",
 
     description:
       "A student networking platform that helps students connect through shared skills, interests, and learning goals.",
@@ -124,6 +124,7 @@ export const projects = [
     category: "Full Stack",
     status: "Live",
     path: "/project/airbnb-clone",
+    web: "airbnb-clone.com",
 
     description:
       "A full-stack property rental application where guests can explore property listings, view details and save favourites, while hosts can manage their own property listings.",
@@ -140,7 +141,7 @@ export const projects = [
     ],
 
     links: {
-      github: "#",
+      github: "https://github.com/harshrai2910/Airbnb",
       live: "#",
     },
 
@@ -275,6 +276,7 @@ export const projects = [
     category: "Full Stack",
     status: "Built",
     path: "/project/link-saver",
+    web: "Link-saver.com",
 
     description:
       "A full-stack link management application that allows users to securely save, organize, edit and manage their personal collection of useful links.",

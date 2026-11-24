@@ -10,6 +10,8 @@ import { ContactSection } from "./components/Contact/ContactSection";
 import { EngineeringSection } from "./components/Engineering/EngineeringSection";
 import { EngineeringDataComponent } from "./components/Engineering/EngineeringDataComponent";
 import { ProjectCardComponent } from "./components/Projects/ProjectCardComponent";
+import { SystemsSection } from "./components/Systems/SystemsSection";
+import { SystemCardComponent } from "./components/Systems/SystemCardComponent";
 
 function App() {
   const { theme } = useTheme();
@@ -36,7 +38,6 @@ function App() {
           <Route path="/" element={<OriginSection />} />
           <Route path="/projects" element={<ProjectSection />} />
           <Route path="/engineering" element={<EngineeringSection />} />
-          <Route path="/experiment" element={<p>experiment</p>} />
           <Route path="/contact" element={<ContactSection />} />
           <Route
             path="/engineering/:name"
@@ -44,6 +45,8 @@ function App() {
           />
 
           <Route path="/project/:name" element={<ProjectCardComponent />} />
+          <Route path="/systems" element={<SystemsSection />} />
+          <Route path="/systems/:name" element={<SystemCardComponent />} />
         </Routes>
       </main>
     </>

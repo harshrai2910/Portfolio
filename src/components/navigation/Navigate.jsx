@@ -8,7 +8,7 @@ export const Navigate = () => {
   const navClass = (path) =>
     `px-5 py-3 rounded-full border-none transition-all tracking-wider ${
       location.pathname === path
-        ? `shadow-sm ${theme ? "bg-white text-zinc-500" : "bg-zinc-800 text-white"}`
+        ? `shadow-sm ${theme ? "bg-white text-zinc-600" : "bg-zinc-800 text-white"}`
         : `${theme ? "text-zinc-800" : "text-zinc-100"}`
     }`;
 
@@ -26,8 +26,8 @@ export const Navigate = () => {
         ENGINEERING
       </Link>
       |
-      <Link to="/experiment" className={navClass("/experiment")}>
-        EXPERIMENTS
+      <Link to="/systems" className={navClass("/systems")}>
+        SYSTEMS
       </Link>
       |
       <Link to="/contact" className={navClass("/contact")}>

@@ -166,7 +166,10 @@ export const CodeCard = () => {
 
           <div className="min-w-0 flex-1">
             {DATA.map((line, i) => (
-              <div key={i} className="whitespace-pre-wrap break-words min-h-6">
+              <div
+                key={i}
+                className="whitespace-pre-wrap wrap-break-words min-h-6"
+              >
                 {line.map((token, j) => {
                   const visible = Math.max(
                     0,

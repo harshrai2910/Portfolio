@@ -8,7 +8,6 @@ export const ProjectCardComponent = () => {
   const location = useLocation();
   const data = projects.find((data) => data.path === location.pathname);
 
-  console.log(data);
   return (
     <>
       <ProjectCardHeader
@@ -17,6 +16,8 @@ export const ProjectCardComponent = () => {
         links={data.links}
         category={data.category}
         techStack={data.techStack}
+        image={data.image}
+        web={data.web}
       />
       <ProjectCardMain project={data} />
       <Footer />

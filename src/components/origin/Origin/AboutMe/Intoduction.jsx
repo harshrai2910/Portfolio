@@ -54,20 +54,20 @@ export const Introduction = () => {
       <div className="flex flex-wrap gap-2 mb-7">
         <Link
           to="/projects"
-          className={`border-none flex items-center gap-4 font-medium p-1 pr-7 rounded-full shadow-lg transition-all whitespace-nowrap
-            ${theme ? "bg-white/70 border-white/80" : "bg-white/[0.07] border-white/15"}`}
+          className={`border-2 flex items-center gap-4 font-medium p-1 pr-7 rounded-full shadow-lg transition-all whitespace-nowrap
+            ${theme ? "bg-white/70 border-white/80" : "bg-white/20 border-white/10"}`}
         >
           <span className="rounded-full bg-orange-500 p-3 shadow-[inset_0_2px_8px_rgba(255,255,255,0.5)]">
             <ArrowRight size={18} />
           </span>
-          <span className={theme ? "text-zinc-700" : "text-zinc-300"}>
+          <span className={theme ? "text-zinc-700" : "text-white"}>
             Explore Work
           </span>
         </Link>
         <Link
-          to="/engineering"
-          className={`border-none flex items-center gap-4 font-medium px-8 py-3 rounded-full shadow-lg transition-all whitespace-nowrap
-            ${theme ? "bg-white/70 border-white/80 text-zinc-700" : "bg-white/[0.07] border-white/15 text-zinc-300"}`}
+          to="/systems"
+          className={`border-2 flex items-center gap-4 font-medium px-8 py-3 rounded-full shadow-sm transition-all whitespace-nowrap
+            ${theme ? "bg-white border-white/80 text-zinc-700" : "bg-white/7 border-white/10 text-zinc-300"}`}
         >
           Behind The Code
         </Link>
