@@ -22,7 +22,6 @@ export default function SystemCard({ theme, data }) {
     return <Icon className={style} size={size} />;
   };
 
-  console.log(data);
   return (
     <Link
       to={data.path}
