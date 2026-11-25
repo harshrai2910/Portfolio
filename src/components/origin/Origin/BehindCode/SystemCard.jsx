@@ -21,9 +21,11 @@ export default function SystemCard({ theme, data }) {
     const Icon = iconMap[icon];
     return <Icon className={style} size={size} />;
   };
+
+  console.log(data);
   return (
     <Link
-      to={data.link}
+      to={data.path}
       className={`relative flex h-full w-full min-w-0 flex-col rounded-3xl border p-1 shadow-xl sm:rounded-2xl sm:p-2 group
         transition-transform duration-300 ease-in-out hover:-translate-y-1
       ${theme ? "bg-white/50 hover:bg-white/60 border-white/10" : "bg-white/7 hover:bg-white/10 border-white/10"}`}

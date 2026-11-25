@@ -6,6 +6,7 @@ import SystemCard from "./SystemCard";
 
 export const Systems = () => {
   const { theme } = useTheme();
+  console.log(systems);
   return (
     <>
       <div className="flex items-center justify-center w-full px-2 sm:px-4">
