@@ -76,7 +76,7 @@ const iconMap = {
 };
 
 const SectionHeader = ({ n, title, t }) => (
-  <div className="flex items-center gap-4 mb-5">
+  <div className="flex items-center gap-4 mb-5 font-inter">
     <span
       className={`grid place-items-center h-11 w-11 shrink-0 rounded-xl border font-mono text-sm ${t.box}`}
     >
@@ -144,14 +144,13 @@ export const EngineeredCardMain = ({ data }) => {
           py-6 px-4 md:p-10 border-2 shadow-sm rounded-4xl 
           ${theme ? "border-white bg-white/20" : "border-white/5 bg-white/3"}`}
       >
-        {/* 01 Challenge */}
         <section>
           <SectionHeader
             n={data.challenge.number}
             title={data.challenge.title}
             t={t}
           />
-          <div className="grid gap-6 md:grid-cols-[1.4fr_1fr]">
+          <div className="grid gap-6 md:grid-cols-[1.4fr_1fr] font-inter">
             <div className={`space-y-3 leading-relaxed ${t.muted}`}>
               {data.challenge.paragraphs.map((para, index) => (
                 <p key={index}>{para}</p>
@@ -178,17 +177,16 @@ export const EngineeredCardMain = ({ data }) => {
 
         <div className={divider} />
 
-        {/* 02 Bottleneck */}
         <section>
           <SectionHeader
             n={data.bottleneck.number}
             title={data.bottleneck.title}
             t={t}
           />
-          <p className={`leading-relaxed ${t.muted}`}>
+          <p className={`leading-relaxed font-inter ${t.muted}`}>
             {data.bottleneck.intro}
           </p>
-          <div className={`mt-5 rounded-2xl border p-5 ${t.inner}`}>
+          <div className={`mt-5 rounded-2xl border p-5 font-inter ${t.inner}`}>
             <Flow
               steps={data.bottleneck.flow}
               label="Original execution flow"
@@ -199,15 +197,14 @@ export const EngineeredCardMain = ({ data }) => {
               <span>{data.bottleneck.warning}</span>
             </div>
           </div>
-          <p className={`mt-5 leading-relaxed ${t.muted}`}>
+          <p className={`mt-5 leading-relaxed font-inter ${t.muted}`}>
             {data.bottleneck.closing}
           </p>
         </section>
 
         <div className={divider} />
 
-        {/* 03 Solution */}
-        <section>
+        <section className="font-inter">
           <SectionHeader
             n={data.solution.number}
             title={data.solution.statusTitle}
@@ -260,8 +257,7 @@ export const EngineeredCardMain = ({ data }) => {
 
         <div className={divider} />
 
-        {/* 04 Results */}
-        <section>
+        <section className="font-inter">
           <SectionHeader
             n={data.results.number}
             title={data.results.title}
@@ -320,8 +316,7 @@ export const EngineeredCardMain = ({ data }) => {
 
         <div className={divider} />
 
-        {/* 05 Takeaways */}
-        <section>
+        <section className="font-inter">
           <SectionHeader
             n={data.takeaways.number}
             title={data.takeaways.title}
@@ -351,7 +346,7 @@ export const EngineeredCardMain = ({ data }) => {
             <p className={`leading-relaxed ${t.text}`}>
               <span className="font-semibold">
                 {data.takeaways.quote.label}
-              </span>{" "}
+              </span>
               {data.takeaways.quote.text}
             </p>
           </blockquote>

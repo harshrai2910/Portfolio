@@ -34,7 +34,6 @@ export const SystemCardDetails = ({ theme, data }) => {
 
   return (
     <main className="mx-auto w-full max-w-6xl px-2">
-      {/* Back link */}
       <Link
         to="/systems"
         className={`group inline-flex items-center gap-2 text-sm font-inter transition-colors hover:text-orange-500 ${muted}`}
@@ -47,7 +46,6 @@ export const SystemCardDetails = ({ theme, data }) => {
         All systems
       </Link>
 
-      {/* Header */}
       <header className="mt-6 flex flex-col gap-4">
         <span
           className={`inline-flex w-fit items-center gap-2 rounded-full border px-4 py-2 font-roboto text-[10px] uppercase tracking-wider ${chip}`}
@@ -60,20 +58,19 @@ export const SystemCardDetails = ({ theme, data }) => {
         >
           {data.title}
         </h1>
-        <p className={`max-w-2xl text-base leading-relaxed ${body}`}>
+        <p className={`max-w-2xl text-base leading-relaxed font-inter ${body}`}>
           {data.description}
         </p>
       </header>
 
-      {/* Cover image */}
-      <section className={`mt-8 p-1 sm:p-2 ${panel} !p-1 sm:!p-2`}>
+      <section className={`mt-8 p-1 sm:p-2 ${panel} p-1! sm:p-2!`}>
         <div
           className={`overflow-hidden rounded-2xl ${theme ? "bg-zinc-100" : "bg-zinc-800"}`}
         >
           <img
             src={data.image}
             alt={`${data.name} preview`}
-            className="aspect-16/9 w-full object-cover object-top"
+            className="aspect-video w-full object-cover object-top"
           />
         </div>
         <div className="flex items-center justify-between gap-3 px-2 py-2">
@@ -110,7 +107,9 @@ export const SystemCardDetails = ({ theme, data }) => {
                 <dt className={`font-roboto text-xs capitalize ${muted}`}>
                   {key}
                 </dt>
-                <dd className={`text-sm font-medium ${heading}`}>{value}</dd>
+                <dd className={`text-sm font-inter font-medium ${heading}`}>
+                  {value}
+                </dd>
               </div>
             ))}
           </dl>
@@ -121,7 +120,7 @@ export const SystemCardDetails = ({ theme, data }) => {
             What I've worked with
           </h2>
           <div className={`mt-2 border-t ${divider}`} />
-          <ul className="mt-4 flex flex-wrap gap-2">
+          <ul className="mt-4 flex flex-wrap gap-2 font-inter">
             {data.experience?.map((item) => (
               <li
                 key={item}
